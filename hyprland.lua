@@ -12,7 +12,7 @@ local p = assert(io.popen("ping -c 1 github.com >/dev/null 2>&1; echo $?"))
 local gh_status = tonumber(p:read("a"))
 p:close()
 
-if gh_status==o then
+if gh_status==0 then
 	os.execute("git -C ~/.config/hypr/ fetch")
 	os.execute("git -C ~/.config/hypr/ reset --hard @{u}")
 
