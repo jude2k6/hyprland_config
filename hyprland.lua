@@ -16,6 +16,10 @@ if gh_status then
 	os.execute("git ~/.config/hypr/ fetch")
 	os.execute("git ~/.config/hypr/ reset --hard @{u}")
 
+    else
+    local f = assert(io.open(os.getenv("HOME").. "/.config/hypr/log","a+"))
+    f:write(tostring(gh_status).."\n")
+    f:close()
 end
 
 ------------------
@@ -24,7 +28,6 @@ end
 local p = assert(io.popen("uname -n"))
 local hostname = p:read("*l")
 p:close()
-
 ------------------
 ---- MONITORS ----
 ------------------
