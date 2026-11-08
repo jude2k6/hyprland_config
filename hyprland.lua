@@ -4,10 +4,10 @@
 
 -- Please note not all available settings / options are set here.
 -- For a full list, see the wiki
+-------------------
+--- Sync Config ---
+-------------------
 
--- You can (and should!!) split this configuration into multiple files
--- Create your files separately and then require them like this:
--- require("myColors")
 ------------------
 ---  Detection ---
 ------------------
